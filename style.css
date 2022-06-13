@@ -13,7 +13,16 @@ ul {
 }
 
 
-/* Style the list items */
+/* Style die Listeneinträge */
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+}
 
 ul li {
     cursor: pointer;
@@ -30,21 +39,21 @@ ul li {
 }
 
 
-/* Set all odd list items to a different color (zebra-stripes) */
+/* Zebra Optik */
 
 ul li:nth-child(odd) {
     background: #f9f9f9;
 }
 
 
-/* Darker background-color on hover */
+/* Dunklerer Hintergrund wenn du mit der Maus drüber schwebst */
 
 ul li:hover {
     background: #ddd;
 }
 
 
-/* When clicked on, add a background color and strike out text */
+/* Ändert nach dem Klick den Hintergrund und streicht den Text durch */
 
 ul li.checked {
     background: #888;
@@ -53,7 +62,7 @@ ul li.checked {
 }
 
 
-/* Add a "checked" mark when clicked on */
+/* Hakt ab wenn du draufklickst */
 
 ul li.checked::before {
     content: '';
@@ -69,7 +78,7 @@ ul li.checked::before {
 }
 
 
-/* Style the close button */
+/* Style den X Knopp */
 
 .close {
     position: absolute;
@@ -84,7 +93,7 @@ ul li.checked::before {
 }
 
 
-/* Style the header */
+/* Style den Header */
 
 header {
     background-color: #f44336;
@@ -94,7 +103,7 @@ header {
 }
 
 
-/* Clear floats after the header */
+/* Floats nach der Kopfzeile löschen */
 
 header:after {
     content: "";
@@ -103,7 +112,7 @@ header:after {
 }
 
 
-/* Style the input */
+/* Style die Eingabe */
 
 input {
     margin: 0;
@@ -116,7 +125,7 @@ input {
 }
 
 
-/* Style the "Add" button */
+/* Style den Add Knopp */
 
 .addBtn {
     padding: 10px;

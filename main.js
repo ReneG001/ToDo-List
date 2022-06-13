@@ -1,5 +1,5 @@
-// Create a "close" button and append it to each list item
-const myNodelist = document.getElementsByTagName("LI");
+// Fügt jedem Eintrag den Löschenknopf hinzu
+var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
     var span = document.createElement("SPAN");
@@ -9,7 +9,7 @@ for (i = 0; i < myNodelist.length; i++) {
     myNodelist[i].appendChild(span);
 }
 
-// Click on a close button to hide the current list item
+// Mit dem Löschen Knopf, löschst du den Eintrag
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -19,7 +19,7 @@ for (i = 0; i < close.length; i++) {
     }
 }
 
-// Add a "checked" symbol when clicking on a list item
+// Macht ein Häkchen wenn du auf ein Listeneintrag klickst
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
     if (ev.target.tagName === 'LI') {
@@ -27,18 +27,18 @@ list.addEventListener('click', function(ev) {
     }
 }, false);
 
-// Create a new list item when clicking on the "Add" button
+// Macht neuen Listeneintrag wenn du auf Hinzufügen klickst
 function newElement() {
     var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
+    var inputValue = document.getElementById("eingabeText").value;
     var t = document.createTextNode(inputValue);
     li.appendChild(t);
     if (inputValue === '') {
-        alert("You must write something!");
+        alert("Digga! Du musst schon was schreiben!");
     } else {
-        document.getElementById("myUL").appendChild(li);
+        document.getElementById("doToListe").appendChild(li);
     }
-    document.getElementById("myInput").value = "";
+    document.getElementById("eingabeText").value = "";
 
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
@@ -50,6 +50,8 @@ function newElement() {
         close[i].onclick = function() {
             var div = this.parentElement;
             div.style.display = "none";
+
         }
+
     }
 }
