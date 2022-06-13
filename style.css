@@ -79,7 +79,7 @@ ul li.checked::before {
 }
 
 
-/* Style den X Knopp */
+/* Style den Entfernen Knopp */
 
 .close {
     position: absolute;
@@ -90,6 +90,21 @@ ul li.checked::before {
 
 .close:hover {
     background-color: #f44336;
+    color: white;
+}
+
+
+/* Style den Ändern Knopp */
+
+.change {
+    position: absolute;
+    right: 120px;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.change:hover {
+    background-color: rgb(73, 194, 73);
     color: white;
 }
 
