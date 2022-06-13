@@ -22,6 +22,7 @@ ul li {
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    list-style-type: none;
 }
 
 ul li {

@@ -36,7 +36,7 @@ function newElement() {
     if (inputValue === '') {
         alert("Digga! Du musst schon was schreiben!");
     } else {
-        document.getElementById("doToListe").appendChild(li);
+        document.getElementById("toDoListe").appendChild(li);
     }
     document.getElementById("eingabeText").value = "";
 
@@ -50,8 +50,6 @@ function newElement() {
         close[i].onclick = function() {
             var div = this.parentElement;
             div.style.display = "none";
-
         }
-
     }
 }
