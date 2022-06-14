@@ -14,12 +14,23 @@ function newText() {
 
 }
 
+
+// Mit dem Ändern Knopf, änderst du den Eintrag
+var change = document.getElementsByClassName("change");
+var i;
+for (i = 0; i < change.length; i++) {
+    change[i].onclick = function() {
+        alert("Blupp");
+    }
+}
+
+
 // Fügt jedem Eintrag den Löschenknopf hinzu
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
     var span = document.createElement("SPAN");
-    var txt = document.createTextNode("Löschen");
+    var txt = document.createTextNode("Entfernen");
     span.className = "close";
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
@@ -63,7 +74,8 @@ function newElement() {
     document.getElementById("eingabeText").value = "";
 
     var span = document.createElement("SPAN");
-    var txt = document.createTextNode("Löschen");
+
+    var txt = document.createTextNode("Entfernen");
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
@@ -93,6 +105,7 @@ for (j = 0; j < changeButton.length; j++) {
         //alert('do it');
         document.querySelector("#textAendernFeld").style.visibility = "visible";
         document.querySelector("#textAendernButton").style.visibility = "visible";
+
 
     }
 }
