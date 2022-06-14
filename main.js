@@ -85,7 +85,7 @@ function newElement() {
 }
 
 
-// Mit dem Ändern Knopf, änderst du den Eintrag der To-Listen-Einträge
+// Mit dem Ändern Knopf erscheint ein hidden Textfeld und Hinzufügen-Knopf
 const changeButton = document.getElementsByClassName("change");
 var j;
 for (j = 0; j < changeButton.length; j++) {
