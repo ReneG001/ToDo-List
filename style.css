@@ -2,8 +2,12 @@
 
 * {
     box-sizing: border-box;
-}
 
+}
+body{
+    background-image: url("./5073414.jpg");
+    background-position: center;
+}
 
 /* Remove margins and padding from the list */
 
@@ -158,6 +162,11 @@ input {
 
 .addBtn:hover {
     background-color: #bbb;
+}
+
+.footer{
+
+
 }
 
 
