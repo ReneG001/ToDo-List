@@ -167,17 +167,10 @@ input {
     background-color: #bbb;
 }
 
-.footer{
-color: #FEC260;
-
-}
-
-
-
 .container {margin-top: 25px;}
 #toDoListe {padding-top: 15px; padding-bottom: 15px; }
 footer {text-align: center; border-top: 1px solid rgb(200, 200, 200); }
-footer p { padding-top: 15px; padding-bottom: 15px; font-size: 11px;}
+footer p { padding-top: 15px; padding-bottom: 15px; font-size: 2em; color: #FEC260; }
 
 
 .theshadow{ padding-top: 15px;
