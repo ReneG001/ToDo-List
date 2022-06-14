@@ -71,7 +71,7 @@
       position: absolute;
       right: 0;
       top: 0;
-      padding: 12px 16px 12px 16px;
+      padding: 12px 10px 12px 10px;
   }
   
   .close:hover {
@@ -84,7 +84,7 @@
       position: absolute;
       right: 130px;
       top: 0;
-      padding: 12px 16px 12px 16px;
+      padding: 12px 10px 12px 10px;
   }
   
   .change:hover {
