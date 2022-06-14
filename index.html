@@ -12,8 +12,14 @@
 <body>
     <header>
         <h2>Meine To-Do-Liste</h2>
-        <input type="text" id="eingabeText" placeholder="Aufgabe ...">
-        <span onclick="newElement()" class="addBtn">Hinzufügen</span>
+        <div class="headerOben">
+            <input type="text" id="eingabeText" placeholder="Aufgabe ...">
+            <span onclick="newElement()" class="addBtn">Hinzufügen</span>
+        </div>
+        <div class="headerUnten">
+            <input id="textAendernFeld" placeholder="...">
+            <span onclick="newText()" class="addBtn" id="textAendernButton">Text ändern</span>
+        </div>
     </header>
 
     <ul id="toDoListe">

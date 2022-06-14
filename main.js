@@ -8,15 +8,11 @@ for (i = 0; i < myNodelist.length; i++) {
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
 }
-// Mit dem Ändern Knopf, änderst du den Eintrag
-var change = document.getElementsByClassName("change");
-var i;
-for (i = 0; i < change.length; i++) {
-    change[i].onclick = function() {
-        alert("Blupp");
-    }
-}
 
+
+function newText() {
+
+}
 
 // Fügt jedem Eintrag den Löschenknopf hinzu
 var myNodelist = document.getElementsByTagName("LI");
@@ -38,6 +34,12 @@ for (i = 0; i < close.length; i++) {
         div.style.display = "none";
     }
 }
+
+
+
+
+
+
 
 // Macht ein Häkchen wenn du auf ein Listeneintrag klickst
 var list = document.querySelector('ul');
@@ -61,7 +63,7 @@ function newElement() {
     document.getElementById("eingabeText").value = "";
 
     var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
+    var txt = document.createTextNode("Löschen");
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
@@ -72,4 +74,31 @@ function newElement() {
             div.style.display = "none";
         }
     }
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("Ändern");
+    span.className = "change";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+
+}
+
+
+// Mit dem Ändern Knopf, änderst du den Eintrag der To-Listen-Einträge
+const changeButton = document.getElementsByClassName("change");
+var j;
+for (j = 0; j < changeButton.length; j++) {
+    changeButton[j].onclick = function() {
+        //alert('do it');
+        document.querySelector("#textAendernFeld").style.visibility = "visible";
+        document.querySelector("#textAendernButton").style.visibility = "visible";
+
+    }
+}
+
+function newText() {
+    //var li = document.getElementsByTagName("li");
+    //var inputValue = document.getElementById("textAendernFeld").value;
+
 }
