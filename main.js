@@ -62,7 +62,7 @@ function newElement() {
 
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("Entfernen");
-    span.className = "Löschen";
+    span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
 
