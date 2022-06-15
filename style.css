@@ -165,13 +165,19 @@ input {
 .container {margin-top: 25px;}
 #toDoListe {padding-top: 15px; padding-bottom: 15px; }
 footer {text-align: center; border-top: 1px solid rgb(200, 200, 200); }
-footer p { padding-top: 15px; padding-bottom: 15px; font-size: 0.5em; color: #FEC260; }
+footer p { padding-top: 15px; padding-bottom: 15px; font-size: 0.75em; color: #FEC260; }
 
 
 .theshadow{ padding-top: 15px;
     -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.5); 
-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.2);
 }
+
+@media only screen and (max-width: 1024px) {
+    p, li, span, input {
+      font-size: 12px !important;
+    }
+  }
 
 @media only screen and (max-width: 768px) {
     p, li, span, input {
