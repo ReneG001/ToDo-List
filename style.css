@@ -6,7 +6,9 @@
 }
 body{
     background-image: url("./5073414.jpg");
-    background-position: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Remove margins and padding from the list */
@@ -14,6 +16,7 @@ body{
 ul {
     margin: 0;
     padding: 0;
+    opacity: 0.6;
 }
 
 
@@ -23,19 +26,10 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #FEC260;
-    font-size: 18px;
-    transition: 0.2s;
-    list-style-type: none;
-}
-
-ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
     background: #8E05C2;
     font-size: 18px;
     transition: 0.2s;
+    list-style-type: none;
     /* make the list items unselectable */
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -88,7 +82,7 @@ ul li.checked::before {
 
 .close {
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 0;
     padding: 12px 16px 12px 16px;
 }
@@ -121,6 +115,7 @@ header {
     padding: 30px 40px;
     color: #A12568;
     text-align: center;
+    opacity: 0.6;
 }
 
 
