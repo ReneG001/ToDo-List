@@ -15,14 +15,14 @@ function newText() {
 }
 
 
-// Mit dem Ändern Knopf, änderst du den Eintrag
+/* // Mit dem Ändern Knopf, änderst du den Eintrag
 var change = document.getElementsByClassName("change");
 var i;
 for (i = 0; i < change.length; i++) {
     change[i].onclick = function() {
         alert("Blupp");
     }
-}
+} */
 
 
 // Fügt jedem Eintrag den Löschenknopf hinzu
@@ -45,12 +45,6 @@ for (i = 0; i < close.length; i++) {
         div.style.display = "none";
     }
 }
-
-
-
-
-
-
 
 // Macht ein Häkchen wenn du auf ein Listeneintrag klickst
 var list = document.querySelector('ul');
@@ -92,8 +86,6 @@ function newElement() {
     span.className = "change";
     span.appendChild(txt);
     li.appendChild(span);
-
-
 }
 
 
@@ -105,7 +97,11 @@ for (j = 0; j < changeButton.length; j++) {
         //alert('do it');
         document.querySelector("#textAendernFeld").style.visibility = "visible";
         document.querySelector("#textAendernButton").style.visibility = "visible";
-
+        const target = event.target;
+        const parent = target.parentElement;
+        console.log(target);
+        console.log(parent);
+        this.parentElement.getElementsByTagName('li').style = "color: black";
 
     }
 }

@@ -24,7 +24,7 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #FEC260;
+    background: #8E05C2;
     font-size: 18px;
     transition: 0.2s;
     list-style-type: none;
@@ -101,7 +101,7 @@ ul li.checked::before {
 }
 
 .change:hover {
-    background-color: rgb(73, 194, 73);
+    background-color: rgb(47, 117, 29);
     color: #FEC260;
 }
 
@@ -142,11 +142,13 @@ header:after {
     float: left;
     font-size: 16px;
     visibility: hidden;
+    background-color: #51557E;
+    color: #FEC260;
 }
 
 #textAendernButton {
-    background-color: #42b426;
-    color: white;
+    background-color: rgb(37, 83, 25);
+    color: #FEC260;
     padding: 10px;
     width: 25%;
     float: left;
@@ -160,13 +162,13 @@ header:after {
 }
 
 #textAendernButton:hover {
-    background-color: #249608;
+    background-color: rgb(16, 42, 15);
 }
 
 
 /* Style die Eingabe */
 
-input {
+#eingabeText {
     margin: 0;
     border: none;
     border-radius: 0;
