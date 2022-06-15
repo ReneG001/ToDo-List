@@ -24,13 +24,13 @@ var i;
 for (i = 0; i < myNodelist.length; i++) {
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("Entfernen");
-    span.className = "Löschen";
+    span.className = "close";
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
 }
 
 // Mit dem Löschen Knopf, löschst du den Eintrag
-var close = document.getElementsByClassName("Löschen");
+var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
