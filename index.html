@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <title>To-Do-Liste Gruppe 4</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-2"></div>
-                <div class="col-12 col-md-8 theshadow">
-    <header>
-        <h2>Meine To-Do-Liste</h2>
-        <input type="text" id="eingabeText" placeholder="Aufgabe ...">
-        <span onclick="newElement()" class="addBtn">Hinzufügen</span>
-    </header>
-
-    <ul id="toDoListe">
-        <li>Deine Mudda anrufen</li>
-        <li class="checked">Bezahl dein Pizza</li>
-        <li>Treff dich mit George</li>
-        <li>Wir brauchen Eier</li>
-        <li>Lese das neue Buch von Dan Brown!</li>
-        <li>Räume deine Bude auf</li>
-    </ul>
-    <footer class="footer">
-        <p>&copy; bei WDG#005 Gruppe 4 / Sarah, René und Romano</p>
-    </footer>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-12 col-md-8 theshadow">
+          <header>
+            <h2>Meine To-Do-Liste</h2>
+            <div class="headerOben">
+              <input type="text" id="eingabeText" placeholder="Aufgabe ..." />
+              <span
+                onclick="newElement(document.getElementById('eingabeText').value)"
+                class="addBtn"
+                >Hinzufügen</span
+              >
             </div>
+            <div class="headerUnten">
+              <input id="textAendernFeld" placeholder="..." />
+              <span onclick="newText()" class="addBtn" id="textAendernButton"
+                >Text ändern</span
+              >
+            </div>
+          </header>
+
+          <ul id="toDoListe"></ul>
+          <footer class="footer">
+            <p>&copy; bei WDG#005 Gruppe 4 / Sarah, René und Romano</p>
+          </footer>
         </div>
-    <div class="col-2"></div>
-    <script src="main.js"></script>
-
-
-</body>
-
+      </div>
+      <div class="col-2"></div>
+      <script src="main.js"></script>
+    </div>
+  </body>
 </html>

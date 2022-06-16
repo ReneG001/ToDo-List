@@ -2,20 +2,22 @@
 
 * {
     box-sizing: border-box;
-
 }
-body{
+
+body {
     background-image: url("./5073414.jpg");
 
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+
 /* Remove margins and padding from the list */
 
 ul {
     margin: 0;
     padding: 0;
+    list-style-position: inside;
     opacity: 0.6;
 }
 ol, ul {
@@ -86,7 +88,7 @@ ul li.checked::before {
     position: absolute;
     right: 15px;
     top: 0;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 10px 12px 10px;
 }
 
 .close:hover {
@@ -99,13 +101,13 @@ ul li.checked::before {
 
 .change {
     position: absolute;
-    right: 120px;
+    right: 130px;
     top: 0;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 10px 12px 10px;
 }
 
 .change:hover {
-    background-color: rgb(73, 194, 73);
+    background-color: rgb(47, 117, 29);
     color: #FEC260;
 }
 
@@ -117,7 +119,9 @@ header {
     padding: 30px 40px;
     color: #A12568;
     text-align: center;
+    height: 230px;
     opacity: 0.6;
+
 }
 
 
@@ -130,9 +134,49 @@ header:after {
 }
 
 
+/* Textfeld und Knopf zum Ändern des ToDoListen-Punkts*/
+
+.headerOben {}
+
+.headerUnten {}
+
+#textAendernFeld {
+    margin: 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    visibility: hidden;
+    background-color: #51557E;
+    color: #FEC260;
+}
+
+#textAendernButton {
+    background-color: rgb(37, 83, 25);
+    color: #FEC260;
+    padding: 10px;
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+#textAendernButton:hover {
+    background-color: rgb(16, 42, 15);
+}
+
+
 /* Style die Eingabe */
 
-input {
+#eingabeText {
     margin: 0;
     border: none;
     border-radius: 0;
@@ -164,15 +208,34 @@ input {
     background-color: #bbb;
 }
 
+
 .container {margin-top: 25px;}
 #toDoListe {padding-top: 15px; padding-bottom: 15px; }
 footer {text-align: center; border-top: 1px solid rgb(200, 200, 200); }
 footer p { padding-top: 15px; padding-bottom: 15px; font-size: 0.75em; color: #FEC260; }
 
 
-.theshadow{ padding-top: 15px;
-    -webkit-box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.5); 
-    box-shadow: 0px 0px 25px 5px rgba(0,0,0,0.2);
+#toDoListe {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid rgb(200, 200, 200);
+}
+
+footer p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 0.5em;
+    color: #FEC260;
+}
+
+.theshadow {
+    padding-top: 15px;
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -182,7 +245,10 @@ footer p { padding-top: 15px; padding-bottom: 15px; font-size: 0.75em; color: #F
   }
 
 @media only screen and (max-width: 768px) {
-    p, li, span, input {
-      font-size: 11px !important;
+    p,
+    li,
+    span,
+    input {
+        font-size: 11px !important;
     }
-  }
+}
