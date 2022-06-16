@@ -15,6 +15,7 @@ body {
 ul {
     margin: 0;
     padding: 0;
+    list-style-position: inside;
 }
 
 
@@ -218,23 +219,6 @@ footer p {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 0.5em;
-    color: #FEC260;
-}
-
-#toDoListe {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-footer {
-    text-align: center;
-    border-top: 1px solid rgb(200, 200, 200);
-}
-
-footer p {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 2em;
     color: #FEC260;
 }
 
