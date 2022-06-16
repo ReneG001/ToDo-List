@@ -6,7 +6,9 @@
 
 body {
     background-image: url("./5073414.jpg");
-    background-position: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -16,8 +18,11 @@ ul {
     margin: 0;
     padding: 0;
     list-style-position: inside;
+    opacity: 0.6;
 }
-
+ol, ul {
+  padding-left: 0 !important;
+}
 
 /* Style die Listeneinträge */
 
@@ -81,7 +86,7 @@ ul li.checked::before {
 
 .close {
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 0;
     padding: 12px 10px 12px 10px;
 }
@@ -115,6 +120,8 @@ header {
     color: #A12568;
     text-align: center;
     height: 230px;
+    opacity: 0.6;
+
 }
 
 
@@ -201,9 +208,12 @@ header:after {
     background-color: #bbb;
 }
 
-.container {
-    margin-top: 25px;
-}
+
+.container {margin-top: 25px;}
+#toDoListe {padding-top: 15px; padding-bottom: 15px; }
+footer {text-align: center; border-top: 1px solid rgb(200, 200, 200); }
+footer p { padding-top: 15px; padding-bottom: 15px; font-size: 0.75em; color: #FEC260; }
+
 
 #toDoListe {
     padding-top: 15px;
@@ -227,6 +237,12 @@ footer p {
     -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.2);
 }
+
+@media only screen and (max-width: 1024px) {
+    p, li, span, input {
+      font-size: 12px !important;
+    }
+  }
 
 @media only screen and (max-width: 768px) {
     p,

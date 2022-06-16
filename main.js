@@ -21,7 +21,7 @@ var change = document.getElementsByClassName("change");
 var i;
 for (i = 0; i < change.length; i++) {
     change[i].onclick = function() {
-        alert("Blupp");
+        alert("Du änderst hier gar nix!");
     }
 } */
 
