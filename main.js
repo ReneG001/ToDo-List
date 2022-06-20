@@ -16,10 +16,9 @@ for (i = 0; i < close.length; i++) {
     var div = this.parentElement;
     // bisher wurde nur der li-Punkt unsichtbar gemacht
     // div.style.display = "none";
-    // console.log(div);
     // mit der folgenden Zeile wird der li-Punkt gelöscht ganz gelöscht
     // console.log(div); // gibt li aus
-    console.log(div.firstChild.innerText);
+    // console.log(div.firstChild.innerText);
     const textDelete = div.firstChild.innerText;
 
     // es fehlt noch das Löschen aus dem Array für den local storage
