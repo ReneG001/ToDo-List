@@ -1,254 +1,251 @@
 /* Include the padding and border in an element's total width and height */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url("./5073414.jpg");
+  background-image: url("./5073414.jpg");
 
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 
 /* Remove margins and padding from the list */
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-position: inside;
-    opacity: 0.6;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  opacity: 0.6;
 }
-ol, ul {
+ol,
+ul {
   padding-left: 0 !important;
 }
 
 /* Style die Listeneinträge */
 
 ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #8E05C2;
-    font-size: 18px;
-    transition: 0.2s;
-    list-style-type: none;
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #FEC260;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #8e05c2;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type: none;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fec260;
 }
-
 
 /* Zebra Optik */
 
 ul li:nth-child(odd) {
-    background: #3F0071;
+  background: #3f0071;
 }
-
 
 /* Dunklerer Hintergrund wenn du mit der Maus drüber schwebst */
 
 ul li:hover {
-    background: #610094;
+  background: #610094;
 }
-
 
 /* Ändert nach dem Klick den Hintergrund und streicht den Text durch */
 
-ul li.checked {
-    background: #3E065F;
-    color: #FEC260;
-    text-decoration: line-through;
+li span.checked {
+  color: #fec260;
+  text-decoration: line-through;
 }
-
 
 /* Hakt ab wenn du draufklickst */
 
-ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #FEC260;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+li span.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fec260;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
 }
-
 
 /* Style den Entfernen Knopp */
 
 .close {
-    position: absolute;
-    right: 15px;
-    top: 0;
-    padding: 12px 10px 12px 10px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  padding: 12px 10px 12px 10px;
 }
 
 .close:hover {
-    background-color: #f44336;
-    color: #FEC260;
+  background-color: #f44336;
+  color: #fec260;
 }
-
 
 /* Style den Ändern Knopp */
 
 .change {
-    position: absolute;
-    right: 130px;
-    top: 0;
-    padding: 12px 10px 12px 10px;
+  position: absolute;
+  right: 130px;
+  top: 0;
+  padding: 12px 10px 12px 10px;
 }
 
 .change:hover {
-    background-color: rgb(47, 117, 29);
-    color: #FEC260;
+  background-color: rgb(47, 117, 29);
+  color: #fec260;
 }
-
 
 /* Style den Header */
 
 header {
-    background-color: #1B2430;
-    padding: 30px 40px;
-    color: #A12568;
-    text-align: center;
-    height: 230px;
-    opacity: 0.6;
-
+  background-color: #1b2430;
+  padding: 30px 40px;
+  color: #a12568;
+  text-align: center;
+  height: 230px;
+  opacity: 0.6;
 }
-
 
 /* Floats nach der Kopfzeile löschen */
 
 header:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
-
 
 /* Textfeld und Knopf zum Ändern des ToDoListen-Punkts*/
 
-.headerOben {}
-
-.headerUnten {}
-
 #textAendernFeld {
-    margin: 0;
-    margin-top: 20px;
-    border: none;
-    border-radius: 0;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-    visibility: hidden;
-    background-color: #51557E;
-    color: #FEC260;
+  margin: 0;
+  margin-top: 20px;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  visibility: hidden;
+  background-color: #51557e;
+  color: #fec260;
 }
 
 #textAendernButton {
-    background-color: rgb(37, 83, 25);
-    color: #FEC260;
-    padding: 10px;
-    width: 25%;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-    margin-top: 20px;
-    visibility: hidden;
+  background-color: rgb(37, 83, 25);
+  color: #fec260;
+  padding: 10px;
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  margin-top: 20px;
+  visibility: hidden;
 }
 
 #textAendernButton:hover {
-    background-color: rgb(16, 42, 15);
+  background-color: rgb(16, 42, 15);
 }
-
 
 /* Style die Eingabe */
 
 #eingabeText {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 75%;
-    padding: 10px;
-    float: left;
-    font-size: 16px;
-    background-color: #51557E;
-    color: #FEC260;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  background-color: #51557e;
+  color: #fec260;
 }
-
 
 /* Style den Add Knopp */
 
 .addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #3E065F;
-    color: #FEC260;
-    float: left;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
+  padding: 10px;
+  width: 25%;
+  background: #3e065f;
+  color: #fec260;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+  background-color: #bbb;
 }
 
-
-.container {margin-top: 25px;}
-#toDoListe {padding-top: 15px; padding-bottom: 15px; }
-footer {text-align: center; border-top: 1px solid rgb(200, 200, 200); }
-footer p { padding-top: 15px; padding-bottom: 15px; font-size: 0.75em; color: #FEC260; }
-
+.container {
+  margin-top: 25px;
+}
+#toDoListe {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+footer {
+  text-align: center;
+  border-top: 1px solid rgb(200, 200, 200);
+}
+footer p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 0.75em;
+  color: #fec260;
+}
 
 #toDoListe {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 footer {
-    text-align: center;
-    border-top: 1px solid rgb(200, 200, 200);
+  text-align: center;
+  border-top: 1px solid rgb(200, 200, 200);
 }
 
 footer p {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 0.5em;
-    color: #FEC260;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 0.5em;
+  color: #fec260;
 }
 
 .theshadow {
-    padding-top: 15px;
-    -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.2);
+  padding-top: 15px;
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 1024px) {
-    p, li, span, input {
-      font-size: 12px !important;
-    }
+  p,
+  li,
+  span,
+  input {
+    font-size: 12px !important;
   }
+}
 
 @media only screen and (max-width: 768px) {
-    p,
-    li,
-    span,
-    input {
-        font-size: 11px !important;
-    }
+  p,
+  li,
+  span,
+  input {
+    font-size: 11px !important;
+  }
 }

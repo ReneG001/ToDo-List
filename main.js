@@ -1,62 +1,51 @@
+// Zeile 1 die im local Storage gespeicherten Einträge in einen Array geladen loadedToDos
+// Zeile 3 die Einträge werden als neue Elemente in die Liste eingefügt
 const loadedToDos = JSON.parse(window.localStorage.getItem("toDos"));
-for (const loadedToDo of loadedToDos) {
+if (Array.isArray(loadedToDos)) {
+  for (const loadedToDo of loadedToDos) {
     newElement(loadedToDo);
-}
-
-// Fügt jedem Eintrag einen Ändernknopf hinzu
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("Ändern");
-  span.className = "change";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-function newText() {}
-
-/* // Mit dem Ändern Knopf, änderst du den Eintrag
-var change = document.getElementsByClassName("change");
-var i;
-for (i = 0; i < change.length; i++) {
-    change[i].onclick = function() {
-        alert("Du änderst hier gar nix!");
-    }
-} */
-
-// Fügt jedem Eintrag den Löschenknopf hinzu
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("Entfernen");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+  }
 }
 
 // Mit dem Löschen Knopf, löschst du den Eintrag
 var close = document.getElementsByClassName("close");
+// console.log(close);
 var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     var div = this.parentElement;
-    div.style.display = "none";
+    // bisher wurde nur der li-Punkt unsichtbar gemacht
+    // div.style.display = "none";
+    // console.log(div);
+    // mit der folgenden Zeile wird der li-Punkt gelöscht ganz gelöscht
+    console.log(div); // gibt li aus
+    console.log(div.firstChild.innerText);
+    const textDelete = div.firstChild.innerText;
+    // Funktionsaufruf mit Element, das gelöscht werden soll
+    deleteFromLocalStorage(textDelete);
+    div.parentNode.removeChild(div);
+    // es fehlt noch das Löschen aus dem Array für den local storage
   };
 }
 
-// Macht ein Häkchen wenn du auf ein Listeneintrag klickst
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
-  function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("checked");
+// Streicht den Text durch, um die Aufgabe als erledigt zu markieren
+var listTodos = document.getElementsByClassName("contentText");
+//console.log(listTodos);
+
+for (let k = 0; k < listTodos.length; k++) {
+  listTodos[k].onclick = function (ev) {
+    const listElementTitel = ev.target;
+    console.log(listTodos);
+    // wenn noch kein "line-through" gesetzt ist, dann setzt eins
+    if (listElementTitel.style.textDecoration != "line-through") {
+      listElementTitel.style.textDecoration = "line-through";
     }
-  },
-  false
-);
+    // mit "checked" wird der Haken vorne gesetzt
+    if (listElementTitel.className != "checked") {
+      listElementTitel.className = "checked";
+    }
+  };
+}
 
 // Macht neuen Listeneintrag wenn du auf Hinzufügen klickst
 function newElement(inputValue) {
@@ -69,23 +58,14 @@ function newElement(inputValue) {
     alert("Digga! Du musst schon was schreiben!");
   } else {
     document.getElementById("toDoListe").appendChild(li);
+    //loadedToDos.push(inputValue);
   }
   document.getElementById("eingabeText").value = "";
-
   var span = document.createElement("SPAN");
-
   var txt = document.createTextNode("Entfernen");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      var div = this.parentElement;
-      div.style.display = "none";
-    };
-  }
-
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("Ändern");
   span.className = "change";
@@ -96,7 +76,15 @@ function newElement(inputValue) {
 
 // Mit dem Ändern Knopf erscheint ein hidden Textfeld und Hinzufügen-Knopf
 const changeButton = document.getElementsByClassName("change");
-var j;
+// console.log(changeButton);
+// Erst mal mit prompt
+for (let j = 0; j < changeButton.length; j++) {
+  changeButton[j].onclick = function () {
+    alert(`Button ${changeButton[j]} was clicked.`);
+  };
+}
+
+/* var j;
 for (j = 0; j < changeButton.length; j++) {
   changeButton[j].onclick = function () {
     //alert('do it');
@@ -108,32 +96,12 @@ for (j = 0; j < changeButton.length; j++) {
     console.log(parent);
     this.parentElement.getElementsByTagName("li").style = "color: black";
   };
-}
+} */
 
-function newText() {
-  //var li = document.getElementsByTagName("li");
-  //var inputValue = document.getElementById("textAendernFeld").value;
-}
+// Funktion für Ändernbutton
+function newText() {}
 
 /* Local storage */
-
-// erzeugt einen Eintrag oder überschreibt den Eintrag
-// ohne Warnung, wenn der key schon existiert
-// localStorage.setItem(key, value)
-
-//gibt null zurück, wenn der key nicht existiert
-// localStorage.getItem(key)
-//localStorage.getItem(document.getElementById("eingabeText").value);
-
-//löscht einen Eintrag
-// localStorage.removeItem(key);
-
-// Verfügbarer Speicherplatz für das Storage-Objekt
-// nur IE
-// localStorage.remainingSpace();
-
-//löscht den Speicher
-// localStorage.clear();
 
 function saveToLocalStorage() {
   const toDos = [];
@@ -143,6 +111,13 @@ function saveToLocalStorage() {
     // console.log(contentText);
     toDos.push(contentText.innerText);
   }
-  console.log(toDos);
+  // console.log(toDos);
   localStorage.setItem("toDos", JSON.stringify(toDos));
+}
+
+function deleteFromLocalStorage(textDelete) {
+  console.log("was ist im local storage: " + loadedToDos);
+  console.log("was soll gelöscht werden: " + textDelete);
+  console.log("Länge des local storage: " + loadedToDos.length);
+  console.log("Länge des local storage: " + loadedToDos.length);
 }
