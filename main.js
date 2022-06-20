@@ -18,13 +18,14 @@ for (i = 0; i < close.length; i++) {
     // div.style.display = "none";
     // console.log(div);
     // mit der folgenden Zeile wird der li-Punkt gelöscht ganz gelöscht
-    console.log(div); // gibt li aus
+    // console.log(div); // gibt li aus
     console.log(div.firstChild.innerText);
     const textDelete = div.firstChild.innerText;
+
+    // es fehlt noch das Löschen aus dem Array für den local storage
     // Funktionsaufruf mit Element, das gelöscht werden soll
     deleteFromLocalStorage(textDelete);
     div.parentNode.removeChild(div);
-    // es fehlt noch das Löschen aus dem Array für den local storage
   };
 }
 
@@ -115,9 +116,19 @@ function saveToLocalStorage() {
   localStorage.setItem("toDos", JSON.stringify(toDos));
 }
 
+// wenn ein Element gelöscht wird, soll es aus dem local storage entfernt werden
 function deleteFromLocalStorage(textDelete) {
-  console.log("was ist im local storage: " + loadedToDos);
+  /*   console.log("was ist im local storage: " + loadedToDos);
   console.log("was soll gelöscht werden: " + textDelete);
   console.log("Länge des local storage: " + loadedToDos.length);
-  console.log("Länge des local storage: " + loadedToDos.length);
+  console.log("position von textDelete " + loadedToDos.indexOf(textDelete)); */
+  const deleteFromArray = loadedToDos.indexOf(textDelete);
+  if (deleteFromArray !== -1) {
+    loadedToDos.splice(deleteFromArray, 1);
+  }
+
+  console.log("was ist im local storage: " + loadedToDos);
+  // local storage aktualisieren
+  localStorage.clear();
+  localStorage.setItem("toDos", JSON.stringify(loadedToDos));
 }
