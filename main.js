@@ -59,40 +59,7 @@ list.addEventListener(
 );
 
 // Macht neuen Listeneintrag wenn du auf Hinzufügen klickst
-function newElement(inputValue) {
-  var li = document.createElement("li");
-  var t = document.createElement("span");
-  t.innerText = inputValue;
-  t.className = "contentText";
-  li.appendChild(t);
-  if (inputValue === "") {
-    alert("Digga! Du musst schon was schreiben!");
-  } else {
-    document.getElementById("toDoListe").appendChild(li);
-  }
-  document.getElementById("eingabeText").value = "";
 
-  var span = document.createElement("SPAN");
-
-  var txt = document.createTextNode("Entfernen");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      var div = this.parentElement;
-      div.style.display = "none";
-    };
-  }
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("Ändern");
-  span.className = "change";
-  span.appendChild(txt);
-  li.appendChild(span);
-  saveToLocalStorage();
-}
 
 // Mit dem Ändern Knopf erscheint ein hidden Textfeld und Hinzufügen-Knopf
 const changeButton = document.getElementsByClassName("change");
@@ -135,14 +102,4 @@ function newText() {
 //löscht den Speicher
 // localStorage.clear();
 
-function saveToLocalStorage() {
-  const toDos = [];
-  for (const listElement of document.querySelectorAll("#toDoListe > li")) {
-    // console.log(listElement);
-    const contentText = listElement.querySelector(".contentText");
-    // console.log(contentText);
-    toDos.push(contentText.innerText);
-  }
-  console.log(toDos);
-  localStorage.setItem("toDos", JSON.stringify(toDos));
-}
+
