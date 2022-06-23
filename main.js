@@ -104,13 +104,14 @@ function newElement(inputValue) {
     changeButton[j].onclick = () => {
       promptEingabe = window.prompt(
         "Gib der Aufgabe einen neuen Namen: ",
-        inputValue
+        changeButton[j].parentNode.firstChild.innerText
       );
       document.getElementsByClassName("contentText")[j].innerText =
         promptEingabe;
       // console.log("changeButton li: " + document.getElementsByClassName("contentText")[j].innerText );
     };
     console.log("promptEingabe " + promptEingabe);
+    console.log(j);
   }
 }
 
