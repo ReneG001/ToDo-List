@@ -32,25 +32,8 @@ function App() {
         span2.appendChild(txt2);
         li.appendChild(span2);
         saveToLocalStorage();
-    }
-    function saveToLocalStorage() {
-        const toDos = [];
-        for (const listElement of document.querySelectorAll("#toDoListe > li")) {
-            // console.log(listElement);
-            const contentText = listElement.querySelector(".contentText");
-            // console.log(contentText);
-            toDos.push(contentText.innerText);
-        }
-        console.log(toDos);
-        localStorage.setItem("toDos", JSON.stringify(toDos));
-    }
-    React.useEffect(() => {
-        const loadedToDos = JSON.parse(window.localStorage.getItem("toDos"));
-        for (const loadedToDo of loadedToDos) {
-            newElement(loadedToDo);
-        }
-
-// Fügt jedem Eintrag einen Ändernknopf hinzu
+    
+        // Fügt jedem Eintrag einen Ändernknopf hinzu
         const myNodelist = document.getElementsByTagName("LI");
         
         for ( let i = 0; i < myNodelist.length; i++) {
@@ -61,16 +44,6 @@ function App() {
             myNodelist[i].appendChild(span);
         }
 
-        function newText() {}
-
-        /* // Mit dem Ändern Knopf, änderst du den Eintrag
-        const change = document.getElementsByClassName("change");
-        const i;
-        for (i = 0; i < change.length; i++) {
-            change[i].onclick = function() {
-                alert("Du änderst hier gar nix!");
-            }
-        } */
 
 // Fügt jedem Eintrag den Löschenknopf hinzu
         const myNodelist2 = document.getElementsByTagName("LI");
@@ -124,30 +97,25 @@ function App() {
             };
         }
 
-        function newText() {
-            //constli = document.getElementsByTagName("li");
-            //const inputValue = document.getElementById("textAendernFeld").value;
+
+    }
+
+    function saveToLocalStorage() {
+        const toDos = [];
+        for (const listElement of document.querySelectorAll("#toDoListe > li")) {
+            // console.log(listElement);
+            const contentText = listElement.querySelector(".contentText");
+            // console.log(contentText);
+            toDos.push(contentText.innerText);
         }
-
-        /* Local storage */
-
-// erzeugt einen Eintrag oder überschreibt den Eintrag
-// ohne Warnung, wenn der key schon existiert
-// localStorage.setItem(key, value)
-
-//gibt null zurück, wenn der key nicht existiert
-// localStorage.getItem(key)
-//localStorage.getItem(document.getElementById("eingabeText").value);
-
-//löscht einen Eintrag
-// localStorage.removeItem(key);
-
-// Verfügbarer Speicherplatz für das Storage-Objekt
-// nur IE
-// localStorage.remainingSpace();
-
-//löscht den Speicher
-// localStorage.clear();
+        console.log(toDos);
+        localStorage.setItem("toDos", JSON.stringify(toDos));
+    }
+    React.useEffect(() => {
+        const loadedToDos = JSON.parse(window.localStorage.getItem("toDos"));
+        for (const loadedToDo of loadedToDos) {
+            newElement(loadedToDo);
+        }
 
 
 
