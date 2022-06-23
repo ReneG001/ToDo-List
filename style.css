@@ -141,7 +141,7 @@ header:after {
 
 #textAendernButton {
   background-color: rgb(37, 83, 25);
-  color: #fec260;
+  color: #fddaa1;
   padding: 10px;
   width: 25%;
   float: left;
@@ -169,7 +169,7 @@ header:after {
   float: left;
   font-size: 16px;
   background-color: #51557e;
-  color: #fec260;
+  color: #fddaa1;
 }
 
 /* Style den Add Knopp */
