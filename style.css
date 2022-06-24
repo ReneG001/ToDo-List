@@ -13,6 +13,7 @@ body {
 
 /* Remove margins and padding from the list */
 
+h2 {margin-bottom: 1.5rem !important;}
 ul {
   margin: 0;
   padding: 0;
@@ -39,7 +40,7 @@ ul li {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #fec260;
+  color: #ffebca;
 }
 
 /* Zebra Optik */
@@ -57,7 +58,7 @@ ul li:hover {
 /* Ändert nach dem Klick den Hintergrund und streicht den Text durch */
 
 li span.checked {
-  color: #fec260;
+  color: #ffebca;
   text-decoration: line-through;
 }
 
@@ -66,7 +67,7 @@ li span.checked {
 li span.checked::before {
   content: "";
   position: absolute;
-  border-color: #fec260;
+  border-color: #ffebca;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -87,7 +88,7 @@ li span.checked::before {
 
 .close:hover {
   background-color: #f44336;
-  color: #fec260;
+  color: #fff;
 }
 
 /* Style den Ändern Knopp */
@@ -101,7 +102,7 @@ li span.checked::before {
 
 .change:hover {
   background-color: rgb(47, 117, 29);
-  color: #fec260;
+  color: #fff;
 }
 
 /* Style den Header */
@@ -109,7 +110,7 @@ li span.checked::before {
 header {
   background-color: #1b2430;
   padding: 30px 40px;
-  color: #c57ba2;
+  color: #cf9ab7;
   text-align: center;
   height: 230px;
   opacity: 0.6;
@@ -141,7 +142,7 @@ header:after {
 
 #textAendernButton {
   background-color: rgb(37, 83, 25);
-  color: #fddaa1;
+  color: #ffebca;
   padding: 10px;
   width: 25%;
   float: left;
@@ -169,7 +170,7 @@ header:after {
   float: left;
   font-size: 16px;
   background-color: #51557e;
-  color: #fddaa1;
+  color: #ffebca;
 }
 
 /* Style den Add Knopp */
@@ -178,7 +179,7 @@ header:after {
   padding: 10px;
   width: 25%;
   background: #3e065f;
-  color: #fec260;
+  color: #ffebca;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -199,16 +200,6 @@ header:after {
 #toDoListe {
   padding-top: 15px;
   padding-bottom: 15px;
-}
-footer {
-  text-align: center;
-  border-top: 1px solid rgb(200, 200, 200);
-}
-footer p {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 0.75em;
-  color: #fec260;
 }
 
 #toDoListe {
